@@ -1,0 +1,86 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: content-box;
+}
+h1 {
+  margin: 50px 0;
+  text-align: center;
+  text-transform: capitalize;
+}
+.parent {
+  height: 50vh;
+  width: 100%;
+  display: flex; /* used for side by side */
+  justify-content: space-around;
+  align-items: center;
+  box-sizing: border-box;
+}
+.daughter {
+  width: 50%;
+  padding: 0;
+  text-align: center;
+}
+.daughter img {
+  width: 540px;
+}
+.daughter a {
+  text-align: center;
+}
+.son {
+  width: 50%;
+  padding: 0 5%;
+  box-sizing: border-box;
+  text-align: justify;
+  line-height: 1.7;
+}
+
+/* -------- Media Quries -------------*/
+
+/* -------- Desktops and laptops -------------*/
+@media (min-width: 1024px) {
+  /* 1024px se upper ke se dekhana hai-->kum se kum 1024px huna hi chahiye */
+  h1 {
+    color: blue;
+  }
+  .parent p {
+    word-spacing: 20px;
+  }
+}
+
+/* -------- Tablets and Ipads -------------*/
+@media (min-width: 769px) and (max-width: 1023px) {
+  p {
+    color: darkolivegreen;
+  }
+}
+
+/* -------- Mobile Phones -------------*/
+/* max-width:768 means from zero to 768 range show */
+@media (max-width: 768px) {
+  h1 {
+    color: darkblue;
+  }
+  .parent {
+    display: block; /* remove side by side */
+  }
+  .daughter {
+    width: 100%; /* just keep other same as above and change width only */
+  }
+  .son {
+    width: 100%;
+  }
+  .daughter img {
+    width: 100%;
+    height: auto;
+  }
+}
+@media (max-width: 468px) {
+  .daughter img {
+    padding: 10%; /* for image best take padding */
+    box-sizing: border-box; /* width=100px and padding=20px then total space=120 px but using
+    boder-box width 100px keep same */
+  }
+}
+
+/* always write media query last dont keep css after media query otherwise it takes that css or waste media query */
